@@ -1,0 +1,399 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+header{
+    .container{
+        .row{
+            .col-md-2{
+                img{
+                    width: 210px;
+                    // object-fit: cover;
+                }
+            }
+            .col-md-8{
+                nav{
+                    .nav{
+                        ul>li{
+                            position: relative;
+                            &:hover >.home-list{
+                                visibility: visible;
+                                height: 270px;
+                                transition: 1s;
+                                opacity: 100%;
+                            }
+                            &:hover>.pages-list{
+                                visibility: visible;
+                                height: 150px;
+                                transition: 1s;
+                                opacity: 100%;
+                            }
+                            a{
+                                position: relative;
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    background-color: black;
+                                    width: 0%;
+                                    height: 1px;
+                                    bottom: -4px;
+                                    left: 0px;
+                                    transition: 0.5s;
+
+                                 
+                                }
+
+                                &:hover::before{
+                                    content: "";
+                                    position: absolute;
+                                    background-color: black;
+                                    height: 1px;
+                                    bottom: -4px;
+                                    left: 0px; 
+                                   width: 100%;
+                                }
+                                
+                            }
+                            .home-list{
+                                position: absolute;
+                                top: 30px;
+                                width: 150px;
+                              visibility: hidden;
+                                height: 0px;
+                               opacity: 0%;
+                               overflow: hidden;
+                                transition: 1s;
+                                z-index: 20;
+                                background-color: white;
+
+                            }
+
+                            .pages-list{
+                                position: absolute;
+                                top: 30px;
+                                width: 150px;
+                                visibility: hidden;
+                                height: 0px;
+                                opacity: 0%;
+                                overflow: hidden;
+                                transition: 1s;
+                                z-index: 20;
+                                background-color: white;
+
+                            }
+                        }
+                    }
+                }
+                .nav-card{
+                    .fa-magnifying-glass{
+                        transition: 0.5s;
+                        color: black;
+                        cursor: pointer;
+                        &:hover{
+                        color: #f5675a;
+                    }
+                }
+                }
+            }
+        }
+    }
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+main{
+    #slider{
+        .carousel{
+            position: relative;
+            .carousel-content{
+                width: 520px;
+                position: absolute;
+                top: 150px;
+                left: 200px;
+                z-index: 10;
+            }
+        }
+    }
+
+    #all-products{
+        .container{
+            .row{
+                .col-md-12{
+                    ul>li{
+                        font-size: 12px;
+                        transition: 0.5s;
+                        cursor: pointer;
+                        &:hover{
+                            color: #f5675a;
+                        }
+                        
+                    }
+
+                    .filter{
+                        position: relative;
+                        p{
+                            i{
+                                font-size: 13px;
+                                color: rgb(78, 75, 75);
+                            }
+                            &:hover + .filter-items{
+                                visibility: visible;
+                                opacity: 1;
+                            }
+
+                           
+                        }
+                        .filter-items{
+                            position: absolute;
+                            top: 38px;
+                            left: -309px;
+                            z-index: 30;
+                            line-height: 25px;
+                            background-color: white;
+                            visibility: hidden;
+                            opacity: 0;
+                            ul>li{
+                                color: grey;
+                                font-size: 14px;
+                                &:hover{
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .col-md-3{
+                    .product-card{
+                        position: relative;
+                        height: 500px;
+
+                        .product-card-img{
+                            img{
+                                width: 300px;
+                                height: 400px;
+                            }
+                        }
+                        .product-card-content{
+                            text-align: center;
+                            a{
+                                font-size: 15px;
+                                transition: .4s;
+
+                                &:hover{
+                                    color: #f5675a;
+                                }
+                            }
+                            .price{
+                                margin-top: 12px;
+                                transition: 0.7s all;
+                                position: absolute;
+                                bottom: 4%;
+                                left: 140px;
+                                p{
+                                    color: grey;
+                                    font-size: 12px;
+                                }
+                            }
+                            .add-card{
+                                opacity: 0;
+                                transition: 0.7s;
+                                position: absolute;
+                                bottom: 4%;
+
+                                left: 50px;
+                                visibility: hidden;
+                                    p{
+                                        color: grey;
+                                        font-size: 12px;
+                                    }
+                            }
+                        }
+                        &:hover{
+                            .price{
+                                opacity: 0;
+                                visibility: hidden;
+                                left: 200px;
+                                transition: 0.7s all;
+                                
+                            }
+                            .add-card{
+                                opacity: 1;
+                                left: 117px;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+     
+        }  
+        
+    }
+
+    #valentine{
+        .container-fluid{
+            background-color: #f7f7f7;
+            .container{
+                .row{
+                    .col-md-6{
+                        .valentine-img{
+                            position: relative;
+                            overflow: hidden;
+                            height: 420px;
+                            &:hover{
+                                img{
+                                    transform: scale(1.1);
+                                }
+                            }
+
+                            a{
+                                position: absolute;
+                                width: 85px;
+                                height: 80px;
+                                border-radius: 50%;
+                                top: 44%;
+                                left: 40%;
+                            }
+                            img{
+                                height: 420px;
+                                transition: 0.5s;
+
+                            }
+                            i{
+                                position: absolute;
+                                padding: 32px 35px;
+                                padding-left: 40px;
+                                font-size: 25px;
+                                background-color: white;
+                                color: #f5675a;
+                                border-radius: 50%;
+                                top: -5px;
+                                left: -5px;
+                                z-index: 10;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #flower-experts{
+        .container{
+            .row{
+                .col-md-3{
+                    .expert-card{
+                        text-align: center;
+                        .expert-card-content{
+                            margin-top: 15px;
+                            p:first-child {
+                                font-size: 14px;
+                            }
+                            p:nth-child(2){
+                                color: rgb(184, 179, 179);
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #subcribe{
+        .container-fluid{
+            background-image: url("/assets/images/parallax-background.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:auto;
+            .row{
+                .col-md-6{
+                    .input-group{
+                        input{
+                            height: 7vh;
+                            font-size: 12px;
+                            color: rgb(184, 179, 179);
+                            &::placeholder{
+                            color: rgb(184, 179, 179);
+                            }
+
+                        }
+                        a{
+                            background-color: #f5675a;
+                            color: white;
+                            width: 150px;
+                            padding-top: 23px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #from-our-blog{
+        .container-fluid{
+            background-color: #f8f8f8;
+            padding: 100px 0;
+            .container{
+                .row{
+                    .col-md-4{
+                        .blog-card{
+                            position: relative;
+                            .blog-card-img {
+                                width: 419px;
+                                height: 268px;
+                                overflow: hidden;
+                                &:hover{
+                                    img{
+                                        transform: scale(1.1);
+                                    }
+                                }
+                                img{
+                                width: 419px;
+                                height: 268px;
+                                transition: .5s;
+                            }
+                        }
+                            .blog-card-content{
+                                padding: 10px;
+                                p{
+                                    font-size: 14px;
+                                    color: #6d6a85;
+                                }
+                            }
+                            .datetime{
+                                background-color: white;
+                                position: absolute;
+                                top: 10px;
+                                left: 10px;
+                                padding: 4px 10px;
+                                span{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+}
+
+.modal-body{
+    height: 315px;
+}
+
+.active-catogory-item{
+    color: #f5675a;
+}
